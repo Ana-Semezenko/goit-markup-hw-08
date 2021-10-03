@@ -38,7 +38,9 @@
   }
 }
 .models__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
   transition: box-shadow $transitionSpeed;
 
@@ -76,6 +78,7 @@
 }
 
 .models__info {
+  flex-grow: 1;
   padding: 20px 24px;
   border-left: solid 1px #eeeeee;
   border-right: solid 1px #eeeeee;
