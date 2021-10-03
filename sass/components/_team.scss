@@ -1,0 +1,111 @@
+.team-info {
+  @extend %container;
+  padding-bottom: $distance;
+  padding-top: $distance;
+  background-color: $cardColor;
+  @media screen and (min-width: 1200px) {
+    $distance: 94px;
+  }
+}
+.team {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+.team__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $backgroundColor;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  @media screen and(min-width:1200px) {
+    width: 270px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  @media screen and(min-width:768px) and (max-width: 1199px) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin-right: 30px;
+    &:nth-child(2n) {
+      margin-right: 0px;
+    }
+    &:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and(max-width:767px) {
+    width: 450px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.team__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.team__card {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team__member {
+  margin-bottom: 10px;
+
+  @include heading($primaryColor, $textWeight, 16px, $textHeight, 0.03em);
+  text-align: center;
+}
+.team__occupation {
+  margin-bottom: 16px;
+
+  @include heading($secondaryColor, 400, 16px, $textHeight, 00.03em);
+  text-align: center;
+}
+// social-media
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-media__link {
+  fill: $mainFill;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  transition: background-color $transitionSpeed;
+
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+  }
+
+  &:hover .social-media__icons,
+  &:focus .social-media__icons {
+    fill: $backgroundColor;
+  }
+}
+.social-media__icons {
+  transition: fill $transitionSpeed;
+}

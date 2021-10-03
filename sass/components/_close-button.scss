@@ -1,0 +1,29 @@
+.close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: $backgroundColor;
+
+  width: 30px;
+  height: 30px;
+
+  padding: 0;
+  margin: 8px;
+
+  &:hover .close-button__icon,
+  &:focus .close-button__icon {
+    fill: $accentColor;
+  }
+}
+.close-button__icon {
+  cursor: pointer;
+
+  transition: fill $transitionSpeed;
+}

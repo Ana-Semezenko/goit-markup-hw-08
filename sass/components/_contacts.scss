@@ -1,0 +1,77 @@
+.contacts {
+  display: flex;
+  margin-left: auto;
+
+  font-weight: $textWeight;
+  font-size: 14px;
+  line-height: $textHeight;
+  letter-spacing: 0.02em;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
+  }
+}
+
+.contacts__link {
+  text-decoration-line: none;
+  color: $secondaryColor;
+
+  transition: color $transitionSpeed;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+
+  &:hover .contacts__smartphone,
+  &:focus .contacts__smartphone {
+    fill: $accentColor;
+  }
+
+  &:hover .contacts__envelope,
+  &:focus .contacts__envelope {
+    fill: $accentColor;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts li + li {
+    margin-left: 50px;
+  }
+}
+.contacts__item,
+.contacts__point {
+  display: flex;
+  list-style: none;
+  @media screen and (min-width: 1200px) {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .contacts__point {
+    margin-top: 10px;
+  }
+}
+.contacts__envelope {
+  margin-right: 8px;
+  padding: 0px;
+  width: 14px;
+  height: 10px;
+  fill: $secondaryColor;
+  cursor: pointer;
+
+  transition: fill $transitionSpeed;
+}
+.contacts__smartphone {
+  margin-right: 10px;
+  padding: 0px;
+  width: 10px;
+  height: 14px;
+  fill: $secondaryColor;
+  cursor: pointer;
+
+  transition: fill $transitionSpeed;
+}

@@ -1,0 +1,124 @@
+.mobile-menu {
+  @extend %container;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  padding: 40px;
+
+  transform: translateX(100%);
+  display: none;
+
+  &.is-open {
+    display: block;
+    transform: translateX(0);
+    background-color: $backgroundColor;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu__open {
+    display: none;
+  }
+}
+.mobile-menu__open {
+  background-color: $backgroundColor;
+  border: none;
+
+  cursor: pointer;
+
+  transition: fill $transitionSpeed;
+
+  &:hover,
+  &:focus {
+    fill: $accentColor;
+  }
+}
+.mobile-menu__close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  transition: fill $transitionSpeed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    fill: $accentColor;
+  }
+}
+.mobile-menu__nav {
+  display: flex;
+  flex-direction: column;
+  @include heading($primaryColor, $textWeight, 40px, $textHeight, 0.02em);
+  text-decoration-line: none;
+  list-style: none;
+}
+
+.mobile-menu__link {
+  display: block;
+  padding-bottom: 35px;
+  text-decoration-line: none;
+  color: $primaryColor;
+
+  transition: color $transitionSpeed;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+
+  &--current {
+    position: relative;
+    color: $accentColor;
+  }
+}
+
+.contacts-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 40px;
+  bottom: 134px;
+}
+
+.contacts-menu__mail,
+.contacts-menu__tel {
+  text-decoration-line: none;
+  color: $secondaryColor;
+
+  &:hover,
+  :focus {
+    color: $accentColor;
+  }
+}
+.contacts-menu__point {
+  margin-bottom: 32px;
+  @include heading($secondaryColor, $textWeight, 34px, $textHeight, 00.02em);
+}
+.contacts-menu__item {
+  margin-bottom: 64px;
+  @include heading($secondaryColor, $textWeight, 24px, $textHeight, 00.02em);
+}
+.mobile-social {
+  display: flex;
+  position: absolute;
+  bottom: 48px;
+  left: 40px;
+}
+
+.mobile-social__network {
+  @include heading($accentColor, $textWeight, 18px, $textHeight, 00.02em);
+}
+.mobile-social__line {
+  color: #21212133;
+}

@@ -1,0 +1,55 @@
+.application {
+  position: relative;
+  padding: 40px;
+}
+.application__heading {
+  margin-bottom: 30px;
+
+  @include heading($primaryColor, $textWeightMain, 20px, $textHeight, 00.03em);
+  text-align: center;
+}
+.application__info {
+  position: relative;
+}
+
+.application__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-18px);
+
+  @include heading($secondaryColor, 400, 12px, $textHeight, 00.01em);
+  font-style: normal;
+}
+.application__input {
+  padding-left: 40px;
+  margin-bottom: 28px;
+
+  position: relative;
+  height: 40px;
+  @media screen and (max-width: 1199px) {
+    width: 370px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 450px;
+  }
+  border: 1px solid #21212133;
+  border-radius: 4px;
+  transition: border $transitionSpeed;
+
+  outline: none;
+  &:focus {
+    border: 1px solid $accentColor;
+  }
+
+  &:focus ~ .application__item {
+    fill: $accentColor;
+  }
+}
+.application__item {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+
+  transition: fill $transitionSpeed;
+}

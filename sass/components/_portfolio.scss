@@ -1,0 +1,81 @@
+.portfolio-heading {
+  display: none;
+}
+
+.portfolio-container {
+  @extend %container;
+  @media screen and (min-width: 1200px) {
+    $distance: 94px;
+  }
+  padding-top: $distance;
+  padding-bottom: $distance;
+}
+
+.button-nav {
+  display: flex;
+  @media screen and(max-width:767px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    & li + li {
+      margin-left: 8px;
+    }
+  }
+}
+@media screen and(max-width:767px) {
+  .button-nav li:not(:last-child) {
+    margin-right: 8px;
+    margin-bottom: 15px;
+  }
+}
+.button-nav li:nth-last-child(-n + 2) {
+  margin-bottom: 0px;
+}
+.button-nav__menu {
+  border-radius: 4px;
+  border: 0px;
+
+  padding: 6px 22px;
+
+  background-color: $cardColor;
+
+  @include heading($primaryColor, $textWeight, 16px, $textHeightMain, 00.03em);
+
+  cursor: pointer;
+
+  transition: background-color $transitionSpeed, color $transitionSpeed,
+    box-shadow $transitionSpeed;
+
+  &:focus,
+  &:hover {
+    background-color: $accentColor;
+    color: $backgroundColor;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.08);
+
+    box-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.button-nav__main {
+  border-radius: 4px;
+  border: 0px;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+
+  background-color: $accentColor;
+
+  @include heading(
+    $backgroundColor,
+    $textWeight,
+    16px,
+    $textHeightMain,
+    00.03em
+  );
+}

@@ -1,0 +1,51 @@
+.agreement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 1199px) {
+    position: relative;
+    width: 370px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 450px;
+  }
+}
+.agreement__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.agreement__box {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  &:checked + .agreement__tick {
+    background-color: $accentColor;
+    background-image: url(../img/check.svg);
+    fill: $accentColor;
+    border-radius: 2px;
+  }
+}
+.agreement__tick {
+  @media screen and (max-width: 1199px) {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 7px;
+  }
+}
+.agreement__text {
+  width: 350px;
+  @include heading($secondaryColor, 400, 12px, $textHeight, 00.03em);
+  @media screen and (max-width: 1199px) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateX(24px);
+  }
+}

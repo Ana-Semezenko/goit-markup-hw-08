@@ -1,0 +1,250 @@
+.basement {
+  @extend %container;
+  display: flex;
+  justify-content: center;
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $footerBackground;
+  @media screen and(min-width:1200px) {
+    width: 1600px;
+  }
+}
+
+.basement__container {
+  display: flex;
+  align-items: baseline;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .basement__block {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-right: 93px;
+  }
+  .social-list {
+    margin-left: 70px;
+  }
+}
+@media screen and(min-width:768px) and (max-width: 1199px) {
+  .basement__container {
+    flex-direction: column;
+    justify-content: baseline;
+  }
+  .basement__block {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+  .social-list {
+    margin-left: 165px;
+  }
+  .subscription {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+/* info */
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+.info__logo {
+  color: $accentColor;
+}
+
+.info__brandmark {
+  display: block;
+  margin-bottom: 20px;
+
+  $textFamily: "Raleway";
+  font-family: $textFamily;
+  @include heading(
+    $backgroundColor,
+    $textWeightMain,
+    24px,
+    $textHeight,
+    00.03em
+  );
+  text-decoration-line: none;
+  transition: color $transitionSpeed;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+}
+
+.info__address {
+  display: block;
+  margin-bottom: 60px;
+
+  font-style: normal;
+  @include heading($backgroundColor, 400, 14px, $textHeightMain, 00.03em);
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+}
+
+.info__contacts {
+  display: block;
+  margin-top: 9px;
+
+  @include heading(
+    rgba(255, 255, 255, 0.6),
+    400,
+    14px,
+    $textHeightMain,
+    00.03em
+  );
+  font-style: normal;
+  text-decoration: none;
+
+  transition: color $transitionSpeed;
+
+  &:focus,
+  &:hover {
+    color: $secondaryColor;
+  }
+}
+
+/* social-list */
+
+.social-list {
+  display: flex;
+  flex-direction: column;
+}
+.social-list__heading {
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  @include heading(
+    $backgroundColor,
+    $textWeightMain,
+    14px,
+    $textHeightMain,
+    00.03em
+  );
+  font-family: $textFamily;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.social-list__points {
+  display: flex;
+  padding: 0px;
+  margin-bottom: 60px;
+}
+.social-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  fill: $backgroundColor;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  transition: background-color $transitionSpeed;
+
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+  }
+}
+
+.social-list__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* subscription */
+
+.subscription {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
+}
+
+.subscription__heading {
+  margin-bottom: 20px;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @include heading(
+    $backgroundColor,
+    $textWeightMain,
+    14px,
+    $textHeightMain,
+    00.03em
+  );
+  font-family: $textFamily;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.subscription__box {
+  display: flex;
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.subscription__input {
+  display: flex;
+  padding: 15px 16px;
+  margin-bottom: 20px;
+
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: #2196f300;
+  color: #ffffff99;
+  outline: none;
+  @media screen and (min-width: 1200px) {
+    width: 350px;
+  }
+  @media screen and (max-width: 1199px) {
+    width: 450px;
+  }
+}
+.subscription-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  background-color: $accentColor;
+
+  border: $accentColor;
+  border-radius: 4px;
+
+  @include heading($backgroundColor, $textWeightMain, 16px, 1.9, 0.06em);
+  font-style: normal;
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
+}
+.subscription-button__image {
+  display: flex;
+  margin-left: 10px;
+}

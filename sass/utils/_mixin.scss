@@ -1,0 +1,7 @@
+@mixin heading($color, $font-weight, $size, $height, $space) {
+  color: $color;
+  font-weight: $font-weight;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $space;
+}
