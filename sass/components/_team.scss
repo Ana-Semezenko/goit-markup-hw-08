@@ -1,10 +1,16 @@
 .team-info {
   @extend %container;
-  padding-bottom: $distance;
-  padding-top: $distance;
   background-color: $cardColor;
+  width: 100%;
+  @media screen and (max-width: 1199px) {
+    padding-bottom: $distance;
+    padding-top: $distance;
+  }
   @media screen and (min-width: 1200px) {
     $distance: 94px;
+
+    padding-bottom: $distance;
+    padding-top: $distance;
   }
 }
 .team {

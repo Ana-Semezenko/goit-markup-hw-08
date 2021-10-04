@@ -1,8 +1,16 @@
 .clients {
   @extend %container;
-  $distance: 94px;
-  padding-top: $distance;
-  padding-bottom: $distance;
+
+  @media screen and (max-width: 1199px) {
+    padding-bottom: $distance;
+    padding-top: $distance;
+  }
+  @media screen and (min-width: 1200px) {
+    $distance: 94px;
+
+    padding-bottom: $distance;
+    padding-top: $distance;
+  }
 }
 .clients__list {
   display: flex;
