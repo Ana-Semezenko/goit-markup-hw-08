@@ -3,6 +3,8 @@
   background-color: $cardColor;
   width: 100%;
   @media screen and (max-width: 1199px) {
+    display: flex;
+    justify-content: center;
     padding-bottom: $distance;
     padding-top: $distance;
   }
