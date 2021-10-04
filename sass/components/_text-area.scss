@@ -8,7 +8,10 @@
 
   resize: none;
   height: 120px;
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 469px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 470px) and (max-width: 1199px) {
     width: 370px;
   }
   @media screen and (min-width: 1200px) {

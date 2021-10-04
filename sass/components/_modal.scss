@@ -27,7 +27,11 @@
   transition: translate $transitionSpeed;
 
   background-color: $backgroundColor;
-  @media screen and(max-width:767px) {
+  @media screen and (max-width: 469px) {
+    width: 100vw;
+    height: 90vh;
+  }
+  @media screen and(min-width:470px) and(max-width:767px) {
     max-width: 450px;
     min-height: 500px;
   }

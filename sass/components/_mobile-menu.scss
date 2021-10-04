@@ -103,11 +103,11 @@
 }
 .contacts-menu__point {
   margin-bottom: 32px;
-  @include heading($secondaryColor, $textWeight, 34px, $textHeight, 00.02em);
+  @include heading($secondaryColor, $textWeight, 30px, $textHeight, 00.02em);
 }
 .contacts-menu__item {
   margin-bottom: 64px;
-  @include heading($secondaryColor, $textWeight, 24px, $textHeight, 00.02em);
+  @include heading($secondaryColor, $textWeight, 20px, $textHeight, 00.02em);
 }
 .mobile-social {
   display: flex;
@@ -117,7 +117,7 @@
 }
 
 .mobile-social__network {
-  @include heading($accentColor, $textWeight, 18px, $textHeight, 00.02em);
+  @include heading($accentColor, $textWeight, 14px, $textHeight, 00.02em);
 }
 .mobile-social__line {
   color: #21212133;

@@ -35,6 +35,7 @@ p {
 }
 
 body {
+  width: 100vw;
   color: #212121;
   background-color: #ffffff;
   font-family: "Roboto", sans-serif;
@@ -318,7 +319,7 @@ header {
 }
 
 .main-section {
-  min-width: 480px;
+  width: 100vw;
   max-width: 1600px;
   background-color: #212121;
   text-align: center;
@@ -442,6 +443,14 @@ header {
           align-items: center;
 }
 
+@media screen and (max-width: 767px) {
+  .features {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .features {
     -webkit-box-pack: center;
@@ -477,7 +486,7 @@ header {
 
 @media screen and (max-width: 767px) {
   .features__item {
-    width: 450px;
+    max-width: 450px;
   }
   .features__item:not(:last-child) {
     margin-bottom: 30px;
@@ -568,7 +577,7 @@ header {
 
 @media screen and (max-width: 767px) {
   .icon-box {
-    width: 450px;
+    max-width: 450px;
   }
 }
 
@@ -729,7 +738,7 @@ header {
 
 @media screen and (max-width: 767px) {
   .team__box {
-    width: 450px;
+    max-width: 450px;
   }
   .team__box:not(:last-child) {
     margin-bottom: 30px;
@@ -856,12 +865,17 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 172px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .clients__link {
+    min-width: 172px;
+  }
 }
 
 .clients__link:hover, .clients__link:focus {
@@ -1266,7 +1280,7 @@ header {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .subscription__input {
     width: 450px;
   }
@@ -1341,6 +1355,7 @@ header {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    margin-bottom: 40px;
   }
 }
 
@@ -1352,6 +1367,18 @@ header {
   }
   .button-nav li + li {
     margin-left: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .button-nav {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .button-nav {
+    margin-bottom: 50px;
   }
 }
 
@@ -1418,7 +1445,15 @@ header {
       flex-wrap: wrap;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
+  .models {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .models {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -1584,7 +1619,14 @@ header {
   background-color: #ffffff;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 469px) {
+  .modal {
+    width: 100vw;
+    height: 90vh;
+  }
+}
+
+@media screen and (min-width: 470px) and (max-width: 767px) {
   .modal {
     max-width: 450px;
     min-height: 500px;
@@ -1651,7 +1693,13 @@ header {
   outline: none;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 469px) {
+  .application__input {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 470px) and (max-width: 1199px) {
   .application__input {
     width: 370px;
   }
@@ -1695,7 +1743,13 @@ header {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 469px) {
+  .textarea__info {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 470px) and (max-width: 1199px) {
   .textarea__info {
     width: 370px;
   }
@@ -1735,19 +1789,27 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 30px;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 469px) {
+  .agreement {
+    position: relative;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 470px) and (max-width: 1199px) {
   .agreement {
     position: relative;
     width: 370px;
+    margin-bottom: 30px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .agreement {
     width: 450px;
+    margin-bottom: 30px;
   }
 }
 
@@ -1776,7 +1838,15 @@ header {
   border-radius: 2px;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 469px) {
+  .agreement__tick {
+    position: absolute;
+    left: 0px;
+    bottom: 4px;
+  }
+}
+
+@media screen and (min-width: 470px) and (max-width: 1199px) {
   .agreement__tick {
     position: absolute;
     left: 0px;
@@ -1790,13 +1860,25 @@ header {
   }
 }
 
-.agreement__text {
-  width: 350px;
-  color: #757575;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
+@media screen and (max-width: 469px) {
+  .agreement__text {
+    color: #757575;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  }
+}
+
+@media screen and (min-width: 470px) {
+  .agreement__text {
+    width: 350px;
+    color: #757575;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -1822,20 +1904,37 @@ header {
 }
 
 .send-box__button {
-  width: 200px;
-  height: 50px;
-  color: #ffffff;
   background-color: #2196f3;
   border: none;
   border-radius: 4px;
   -webkit-box-shadow: 0px 4px 4px 0px #00000026;
           box-shadow: 0px 4px 4px 0px #00000026;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.9;
-  letter-spacing: 0.06em;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 469px) {
+  .send-box__button {
+    width: 100px;
+    height: 30px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+  }
+}
+
+@media screen and (min-width: 470px) {
+  .send-box__button {
+    width: 200px;
+    height: 50px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+  }
 }
 
 .send-box__button:hover, .send-box__button:focus {
@@ -2008,7 +2107,7 @@ header {
   margin-bottom: 32px;
   color: #757575;
   font-weight: 500;
-  font-size: 34px;
+  font-size: 30px;
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
@@ -2017,7 +2116,7 @@ header {
   margin-bottom: 64px;
   color: #757575;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
@@ -2034,7 +2133,7 @@ header {
 .mobile-social__network {
   color: #2196f3;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.02em;
 }
