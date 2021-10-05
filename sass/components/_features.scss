@@ -10,6 +10,7 @@
     justify-content: center;
   }
   @media screen and (max-width: 1199px) {
+    max-width: 768px;
     padding-bottom: $distance;
     padding-top: $distance;
   }

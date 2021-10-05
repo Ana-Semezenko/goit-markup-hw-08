@@ -117,7 +117,12 @@
 }
 
 .mobile-social__network {
-  @include heading($accentColor, $textWeight, 14px, $textHeight, 00.02em);
+  @media screen and (max-width: 469px) {
+    @include heading($accentColor, $textWeight, 14px, $textHeight, 00.02em);
+  }
+  @media screen and(min-width:470px) {
+    @include heading($accentColor, $textWeight, 18px, $textHeight, 00.02em);
+  }
 }
 .mobile-social__line {
   color: #21212133;

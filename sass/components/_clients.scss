@@ -1,7 +1,13 @@
 .clients {
   @extend %container;
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
+    padding-bottom: $distance;
+    padding-top: $distance;
+    max-width: 480px;
+  }
+  @media screen and(min-width:768px) and (max-width: 1199px) {
+    max-width: 768px;
     padding-bottom: $distance;
     padding-top: $distance;
   }
@@ -60,6 +66,7 @@
     width: calc((100% - 2 * 30px) / 2);
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
+    max-width: 226px;
     width: calc((100% - 3 * 30px) / 3);
     margin-right: 30px;
     &:nth-child(3n) {
