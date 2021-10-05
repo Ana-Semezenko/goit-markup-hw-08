@@ -11,18 +11,6 @@
   }
 }
 
-@media screen and (max-width: 767px) {
-  .hat, .features, .team-info, .clients, .basement, .portfolio-container, .models, .mobile-menu {
-    max-width: 480px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .hat, .features, .team-info, .clients, .basement, .portfolio-container, .models, .mobile-menu {
-    max-width: 768px;
-  }
-}
-
 h1,
 h2,
 h3,
@@ -714,6 +702,12 @@ header {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 758px) and (max-width: 1199px) {
+  .team {
+    max-width: 768px;
   }
 }
 
